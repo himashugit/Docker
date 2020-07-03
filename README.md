@@ -13,28 +13,33 @@ https://docs.docker.com/get-docker/
 Once it is installed on your windows/linux/ mac wherever you have installed you check the version
 docker -version
 •	docker = this will list the commands
-
+![snap1](https://user-images.githubusercontent.com/51450944/86430236-c2ba8300-bcbf-11ea-87c2-7c3c5592e87a.PNG)
 
  
 •	Management cmd - docker cmd subcmd option = to organize cmd structure,
  
+ ![snap2](https://user-images.githubusercontent.com/51450944/86430541-93584600-bcc0-11ea-897d-d0921a4c3e6e.PNG)
 
 •	docker cmd option = this is the old way of running command and it is still valid
 •	docker container run = this is the new way to run cmd
-•	docker run = initially this cmd was launch and still running
-Example to running a container
+•	docker run = initially this cmd was launched and still working
+
+Example of running a container
 •	docker container run --publish 80:80 nginx = this will launch a container image nginx for you at port 80 access. check it on local host
 download image nginx from docker hub and started a new container.
 --publish will expose your container to port 80. so, on left 80 is used to access on localhost.
 if this 80 is used by some other prog in your machine use any other port 8080 or anything
- 
+![snap3](https://user-images.githubusercontent.com/51450944/86430552-981cfa00-bcc0-11ea-9373-e61a4b08d854.PNG) 
  
 •	docker container run --publish 80:80 --detach nginx =  -d or(--detach )this is detach mode, will run in background.
-Docker container ls = this will list running container
-Docker container ps -a = This will show all your container running/stop
- 
+#docker container ls
+
+this will list running container
+docker container ps -a = This will show all your container running/stop
+![snap4](https://user-images.githubusercontent.com/51450944/86430559-9b17ea80-bcc0-11ea-8556-e988ae30d378.PNG)
 
 docker container stop id  = this will stop your running container
+
  
 Docker container top id = top to list the process ID running inside this
  
