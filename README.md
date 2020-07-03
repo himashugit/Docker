@@ -5,8 +5,8 @@ This is useful for a beginner to understand and follow Docker.
 
 # Installation of Docker can be found here
 https://docs.docker.com/get-docker/
-•	Docker has default image registry which is Docker Hub hub.docker.com
-•	image = binaries and lib, source code application which we want to run
+> Docker has default image registry which is Docker Hub hub.docker.com
+image = binaries and lib, source code application which we want to run
 •	Container = is a running instance of that image running. we can have many containers running off the image
 •	Docker --version = verified cli can talk to engine
 •	docker info - info about images, containers and most config value of engine
@@ -16,11 +16,11 @@ docker -version
 ![snap1](https://user-images.githubusercontent.com/51450944/86430236-c2ba8300-bcbf-11ea-87c2-7c3c5592e87a.PNG)
 
  
-•	Management cmd - docker cmd subcmd option = to organize cmd structure,
+**Management cmd ** - docker cmd subcmd option = to organize cmd structure,
  
  ![snap2](https://user-images.githubusercontent.com/51450944/86430541-93584600-bcc0-11ea-897d-d0921a4c3e6e.PNG)
 
-•	docker cmd option = this is the old way of running command and it is still valid
+**docker cmd option** = this is the old way of running command and it is still valid
 •	docker container run = this is the new way to run cmd
 •	docker run = initially this cmd was launched and still working
 
