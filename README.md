@@ -14,6 +14,8 @@ Once it is installed on your windows/linux/ mac wherever you have installed you 
 docker -version
 •	docker = this will list the commands
 
+![docker](https://user-images.githubusercontent.com/51450944/86420057-46b24200-bca3-11ea-93c5-856bf4a96486.png)
+
  
 •	Management cmd - docker cmd subcmd option = to organize cmd structure,
  
