@@ -2,15 +2,18 @@
 I will be uploading Docker Project here.
 This space keep on updating as i finished something new in Docker.
 This is useful for a beginner to understand and follow Docker.
-	Installation of Docker can be found here
+
+# Installation of Docker can be found here
 https://docs.docker.com/get-docker/
 •	Docker has default image registry which is Docker Hub hub.docker.com
 •	image = binaries and lib, source code application which we want to run
 •	Container = is a running instance of that image running. we can have many containers running off the image
 •	Docker --version = verified cli can talk to engine
 •	docker info - info about images, containers and most config value of engine
-
+Once it is installed on your windows/linux/ mac wherever you have installed you check the version
+docker -version
 •	docker = this will list the commands
+
  
 •	Management cmd - docker cmd subcmd option = to organize cmd structure,
  
