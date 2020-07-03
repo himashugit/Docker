@@ -6,49 +6,47 @@ This is useful for a beginner to understand and follow Docker.
 # Installation of Docker can be found here
 https://docs.docker.com/get-docker/
 > Docker has default image registry which is Docker Hub hub.docker.com
-image = binaries and lib, source code application which we want to run
-•	Container = is a running instance of that image running. we can have many containers running off the image
-•	Docker --version = verified cli can talk to engine
-•	docker info - info about images, containers and most config value of engine
+> image = binaries and lib, source code application which we want to run
+> Container = is a running instance of that image running. we can have many containers running off the image
+*docker --version* = verified cli can talk to engine
+*docker info* - info about images, containers and most config value of engine
 Once it is installed on your windows/linux/ mac wherever you have installed you check the version
 docker -version
-•	docker = this will list the commands
+*docker* or docker --help =  this will list the commands
 ![snap1](https://user-images.githubusercontent.com/51450944/86430236-c2ba8300-bcbf-11ea-87c2-7c3c5592e87a.PNG)
 
  
-**Management cmd ** - docker cmd subcmd option = to organize cmd structure,
+**Management cmd** - docker cmd subcmd option = to organize cmd structure,
  
  ![snap2](https://user-images.githubusercontent.com/51450944/86430541-93584600-bcc0-11ea-897d-d0921a4c3e6e.PNG)
 
-**docker cmd option** = this is the old way of running command and it is still valid
-•	docker container run = this is the new way to run cmd
-•	docker run = initially this cmd was launched and still working
+> docker cmd option = this is the old way of running command and it is still valid
+> docker container run = this is the new way to run cmd
+> docker run = initially this cmd was launched and still working
 
-Example of running a container
-•	docker container run --publish 80:80 nginx = this will launch a container image nginx for you at port 80 access. check it on local host
-download image nginx from docker hub and started a new container.
+> Example of running a container
+> docker container run --publish 80:80 nginx = this will launch a container image nginx for you at port 80 access. check it on local host
+ download image nginx from docker hub and started a new container.
 --publish will expose your container to port 80. so, on left 80 is used to access on localhost.
 if this 80 is used by some other prog in your machine use any other port 8080 or anything
 ![snap3](https://user-images.githubusercontent.com/51450944/86430552-981cfa00-bcc0-11ea-9373-e61a4b08d854.PNG) 
  
-•	docker container run --publish 80:80 --detach nginx =  -d or(--detach )this is detach mode, will run in background.
-#docker container ls
-
-this will list running container
-docker container ps -a = This will show all your container running/stop
+> docker container run --publish 80:80 --detach nginx =  -d or(--detach )this is detach mode, will run in background.
+> docker container ls this will list running container
+> docker container ps -a = This will show all your container running/stop
 ![snap4](https://user-images.githubusercontent.com/51450944/86430559-9b17ea80-bcc0-11ea-8556-e988ae30d378.PNG)
 
-docker container stop id  = this will stop your running container
+> docker container stop id  = this will stop your running container
 
  
-Docker container top id = top to list the process ID running inside this
+> docker container top id = top to list the process ID running inside this
  
-Docker container logs id = this will tell you about logs of your container
+> docker container logs id = this will tell you about logs of your container
  
-docker container --help = this will list help cmd associated with docker. This is the best resource for you 
-docker rm -f id = this will remove all container including a running one, forcefully
+> docker container --help = this will list help cmd associated with docker. This is the best resource for you 
+> docker rm -f id = this will remove all container including a running one, forcefully
 
-	what happens in docker container run
+## what happens in docker container run when we use docker run
 1. Looks for that image locally in image cache, doesnt find anything then look in remote image repo(dcokerhub)
 2. Download the latest ver(nginx:latest)
 3.Create new container based on that image and prepare to start
@@ -88,28 +86,28 @@ docker network inspect - inspect a network, here I inspect a network name bridge
 docker network create - create a network, here created a network appnetwork
  
 
-docker network connect - attach a n/w
-docker network disconnect - Detach a n/w from container
-docker container run -d --name nginx_new --network appnetwork nginx = launching a new container in the appnetwork
-docker inspect my_app_net = inspect this new network attach with new container with IP
+> docker network connect - attach a n/w
+> docker network disconnect - Detach a n/w from container
+> docker container run -d --name nginx_new --network appnetwork nginx = launching a new container in the appnetwork
+> docker inspect my_app_net = inspect this new network attach with new container with IP
  
-docker network connect - Dynamically creates aNIC in a container on an existing virtual network
-Docker Networks - DNS
+> docker network connect - Dynamically creates aNIC in a container on an existing virtual network
+
+## Docker Networks - DNS
 docker has built-in DNS server that containers use by default.
 https://dyn.com/blog/dns-why-its-important-how-it-works
 https://docs.docker.com/config/formatting
-docker run -dit --name centos centos:7 = install centos 7 image and run container
-docker container exec -it centos bash = go inside bash and work inside os
-# yum update curl -y = installed curl
-# curl --version = check version
+> docker run -dit --name centos centos:7 = install centos 7 image and run container
+> docker container exec -it centos bash = go inside bash and work inside os
+> yum update curl -y = installed curl
+> curl --version = check version
 docker container exec -it ubuntu bash = go bash in ubuntu
 apt-get update & apt-get install curl = installed curl and update repo
 curl --version = check version
 https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg
 
 
- 
-Images -
+ ## Images -
 	This contain app binaries and dependencies. Metadata about the image data & how to run the image
 	It is not a complete OS. No kernel, kernel modules (e.g drivers)
 	Small as one file (your app binary) like a golang static binary
